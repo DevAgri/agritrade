@@ -1,0 +1,8 @@
+pt-BR:
+  user_mailer:
+    create:
+      subject: Seja muito bem-vindo(a)
+    password_reset:
+      subject: Instruções para resetar sua senha
+    password_changed:
+      subject: Sua senha foi alterada

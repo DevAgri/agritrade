@@ -1,0 +1,7 @@
+<% if flash.any? %>
+  <div class="flash-msg-wrapper">
+    <% flash.each do |key, value| %>
+      <%= render partial: 'shared/message', locals: { type: key, message: value } %>
+    <% end %>
+  </div>
+<% end %>

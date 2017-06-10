@@ -1,0 +1,5 @@
+<% if message.present? %>
+  <div class="flash-msg<%= (" #{type}" if type.present?) %>">
+    <%= message %>
+  </div>
+<% end %>

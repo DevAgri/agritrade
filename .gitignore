@@ -1,0 +1,11 @@
+# Ignore setting and setup files
+/.env*
+!/.env.sample
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+.DS_Store
+.byebug*
+*~

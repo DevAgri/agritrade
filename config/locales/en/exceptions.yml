@@ -1,0 +1,39 @@
+en:
+  exceptions:
+    messages:
+      default: Something went wrong
+      'ActionController::RoutingError': Not found
+      'AbstractController::ActionNotFound': Not found
+      'ActiveRecord::RecordNotFound': Not found
+      'ActionController::MethodNotAllowed': Method not allowed
+      'ActionController::UnknownHttpMethod': Unknown HTTP method
+      'ActionController::NotImplemented': Not implemented
+      'ActionController::UnknownFormat': Unknown format
+      'ActionController::InvalidAuthenticityToken': Invalid token
+      'ActionController::InvalidCrossOriginRequest': Invalid cross origin request
+      'ActionDispatch::ParamsParser::ParseError': Problems parsing params
+      'ActionController::BadRequest': Bad request
+      'ActionController::ParameterMissing': Params missing
+      'ActiveRecord::RecordInvalid': Validation failed
+
+  errors:
+    messages:
+      default: Something went wrong
+      parameter_missing: Some parameter is missing
+      validation: Validation failed
+      invalid_permission: Invalid permission. You have no permission to do that.
+      invalid_credentials: Invalid credentials
+      invalid_authentication: Invalid authentication. Please, identify yourself.
+      invalid_company: Invalid company. Please, identify your company.
+      invalid_professional: Invalid professional. You are not a professional from this company, are you?
+      invalid_token: Invalid token
+      expired_token: Expired token. Please, make your token again.
+      record_not_found: Record not found
+      invalid_provider: Invalid provider
+      provider_error: The provider is unavailable
+      gateway_error: The gateway is unavailable
+      restricted_remove_record: The record can not be removed because there are some relations restrictions with other records
+      already_queued: The record has already queued
+      invalid_cancel_order: This order can not be canceled
+      invalid_cancel_completed_order: This order is already completed and can not be canceled
+      invalid_cancel_order_by_user: This order is already confirmed and only can be canceled by the seller. Get in touch with the seller to cancel

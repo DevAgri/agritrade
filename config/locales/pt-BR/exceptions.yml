@@ -1,0 +1,40 @@
+pt-BR:
+  exceptions:
+    messages:
+      default: Algo ocorreu inesperadamente em nosso servidor
+      'ActionController::RoutingError': Não encontrado
+      'AbstractController::ActionNotFound': Não encontrado
+      'ActiveRecord::RecordNotFound': Não encontrado
+      'ActionController::MethodNotAllowed': Método não aceito
+      'ActionController::UnknownHttpMethod': Método desconhecido
+      'ActionController::NotImplemented': Não implementado
+      'ActionController::UnknownFormat': Formato desconhecido
+      'ActionController::InvalidAuthenticityToken': Token inválido
+      'ActionController::InvalidCrossOriginRequest': Inválida requisição cross origin
+      'ActionDispatch::ParamsParser::ParseError': Erro ao interpretar os paramêtros
+      'ActionController::BadRequest': Requisição inválida
+      'ActionController::ParameterMissing': Paramêtros faltando
+      'ActiveRecord::RecordInvalid': Validação falhou
+
+  errors:
+    messages:
+      default: Algo ocorreu inesperadamente em nosso servidor
+      parameter_missing: Está faltando algum parâmetro
+      validation: Validação falhou
+      invalid_permission: Permissão negada. Você não tem permissão para prosseguir.
+      invalid_credentials: Credenciais inválidas
+      invalid_authentication: Autenticação inválida. Por favor, identifique-se para prosseguir.
+      invalid_company: Empresa inválida. Por favor, identifique a empresa.
+      invalid_professional: Profissional inválido. Você não é um profissional desta empresa, é?
+      invalid_token: Token inválido
+      expired_token: Token expirado. Por favor, re-faça seu token.
+      record_not_found: Registro não encontrado
+      invalid_provider: Provedor inválido
+      provider_error: Provedor está apresentando erros desconhecidos
+      gateway_error: Gateway está apresentando erros desconhecidos
+      restricted_remove_record: O registro não pode ser removido pois existem algumas restrições de relação com outros registros
+      already_queued: O registro já foi enfileirado
+      invalid_cancel_order: Este pedido não pode ser cancelado
+      invalid_cancel_completed_order: Este pedido já foi completado e não pode ser cancelado
+      invalid_cancel_order_by_user: Este pedido já foi confirmado e só pode ser cancelado pelo vendedor. Tente entrar em contato com o mesmo para efetivar o cancelamento
+      incomplete_profile: Seu cadastro está incompleto. Por favor, complete-o antes de prosseguir.

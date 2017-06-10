@@ -1,0 +1,8 @@
+en:
+  user_mailer:
+    create:
+      subject: Very welcome
+    password_reset:
+      subject: Instructions to reset your password
+    password_changed:
+      subject: Your password has been changed

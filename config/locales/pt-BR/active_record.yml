@@ -1,0 +1,38 @@
+pt-BR:
+  activerecord:
+    common:
+      models: &models
+        session: Sessão
+        user: Usuário
+        request: Requisição
+
+      attributes: &attributes
+        <<: *models
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+
+    models:
+      <<: *models
+
+    attributes:
+      active_admin/comment:
+        <<: *attributes
+        resource_type: Tipo de recurso
+        author_type: Tipo de autor
+        namespace: Namespace
+        body: Corpo
+      session:
+        <<: *attributes
+      user:
+        <<: *attributes
+        first_name: Nome
+        last_name: Sobrenome
+        encrypted_password: Senha criptografada
+        password: Senha
+        password_confirmation: Confirmação da senha
+        avatar_image: Imagem de avatar
+        role: Permissão
+        roles:
+          normal: Usuário
+          admin: Administrador

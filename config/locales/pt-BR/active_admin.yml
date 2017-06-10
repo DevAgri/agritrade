@@ -1,0 +1,15 @@
+pt-BR:
+  active_admin:
+    common:
+      all: Todos
+      mark_as_offline: Marcar como offline
+      mark_as_online: Marcar como online
+    bidding:
+      to_accept: À aceitar
+      to_confirm: À confirmar
+      on_going: Em andamento
+      finished: Finalizado
+    user:
+      last_20_orders: Últimos 20 pedidos
+    pharmacy:
+      last_20_orders: Últimos 20 pedidos
