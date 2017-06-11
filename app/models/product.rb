@@ -5,6 +5,8 @@ class Product < ActiveRecord::Base
   has_many :report_products, class_name: 'ReportProduct'
   has_many :reports, through: :report_products
 
+  searchkick
+
   validates :title, presence: true
 
   attachment :avatar_image, type: :image
