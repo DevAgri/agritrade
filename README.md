@@ -1,124 +1,101 @@
-# AgriTrade API
+# AgriTrade Back-end
+
+## Pre-requisites
+1. Ruby 2.2.6+
+2. Elasticsearch 5+
+2. PostgreSQL 9+
+
+## Installation
+1. Clone project
+2. Install bundler with `gem install bundler`
+3. Run `bundle install` to install dependencies
+4. Duplicate .env and set vars
+5. Exec `bundle exec rake db:{create,migrate}`
+6. Exec `rails server`
+
+## Create admin user
+1. Run `bundle exec rails console`
+2. Run `User.create(first_name: 'John', last_name: 'Doe', password: '123123', password_confirmation: '123123', email: 'john.doe@gmail.com', role: :admin)`
+3. That's it
 
 ## Licenses
-GPLv2
 
-gem 'rails', '4.2.4'
-GPLv2
+Agri Trade (GPLv2)
 
-gem 'pg', '~> 0.18'
-GPL
+rails (GPLv2)
 
-gem 'sidekiq', '~> 3.3'
-LGPLv3
+pg (GPL)
 
-gem 'clockwork', '~> 1.2'
-MIT
+sidekiq (GPLv3)
 
-gem 'ar-uuid', '~> 0.1'
-N/A
+clockwork (MIT)
 
-gem 'rollbar', '~> 2.4'
-MIT
+rollbar (MIT)
 
-gem 'dotenv-rails', '~> 2.0'
-MIT
+dotenv-rails (MIT)
 
-gem 'rack-cors', '~> 0.4', require: 'rack/cors'
-MIT
+rack-cors (MIT)
 
-gem 'lograge', '~> 0.3'
-MIT
+lograge (MIT)
 
-gem 'versionist', '~> 1.4'
-MIT
+versionist (MIT)
 
-gem 'http_accept_language', '~> 2.0'
-GPLv2
+http_accept_language (GPLv2)
 
-gem 'roar-rails', '~> 1.0', '< 1.1.0'
-MIT
+roar-rails (MIT)
 
-gem 'bcrypt', '~> 3.1'
-GPLv2
+bcrypt (GPLv2)
 
-gem 'pundit', '~> 1.0'
-MIT
+pundit (MIT)
 
-gem 'phony_rails', '~> 0.14'
-MIT
+phony_rails (MIT)
 
-gem 'kaminari', '~> 0.16'
-GPL
+kaminari (GPL)
 
-gem 'jwt', '~> 1.5'
-GPL
+jwt (GPL)
 
-gem 'public_activity', '~> 1.4'
-GPL
+public_activity (GPL)
 
-gem 'browser', '~> 1.0'
-MIT
+browser (MIT)
 
-gem 'koala', '~> 2.0'
-GPL
+koala (GPL)
 
-gem 'mini_magick', '~> 4.2'
-MIT
+mini_magick (MIT)
 
-gem 'refile', '~> 0.5', require: 'refile/rails', github: 'refile/refile'
-GPLv3
+refile refile/refile (GPLv3)
 
-gem 'refile-mini_magick', '~> 0.1'
-GPLv3
+refile-mini_magick (GPLv3)
 
-gem 'refile-s3', '~> 0.1'
-GPLv3
+refile-s3 (GPLv3)
 
-gem 'aws-sdk', '~> 2.0'
-MIT
+aws-sdk (MIT)
 
-gem 'email_prefixer', '~> 1.1'
-MIT
+email_prefixer (MIT)
 
-gem 'has_scope', '~> 0.6'
-MIT
+has_scope (MIT)
 
-gem 'nokogiri', '~> 1.6'
-GPLv2
+nokogiri (GPLv2)
 
-gem 'wannabe_bool', '~> 0.1'
-MIT
+wannabe_bool (MIT)
 
-gem 'rails-env', '~> 1.0'
-MIT
+rails-env (MIT)
 
-gem 'devise', '~> 3.5'
-GPL
+devise (GPL)
 
-gem 'activeadmin', github: 'activeadmin'
-LGPLv3
+activeadmin (GPLv3)
 
-gem 'chosen-rails'
-MIT
+chosen-rails (MIT)
 
-gem 'ancestry'
-MIT
+ancestry (MIT)
 
-gem 'friendly_id'
-GPL
+friendly_id (GPL)
 
-gem 'searchkick'
-GPLv2
+searchkick (GPLv2)
 
-gem 'chartkick'
-GPLv2
+chartkick (GPLv2)
 
-gem 'groupdate'
-GPLv2
+groupdate (GPLv2)
 
-gem 'validates_email_format_of', '~> 1.6'
-MIT
+validates_email_format_of (MIT)
 
-gem 'validates_cpf_cnpj', '~> 0.2'
-MIT
+validates_cpf_cnpj (MIT)
