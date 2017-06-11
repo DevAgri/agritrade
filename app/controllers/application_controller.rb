@@ -11,6 +11,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # TODO
+  def mock_current_user
+    User.find('67cbc6eb-44d6-4aa0-880f-eb75c07ee5a6')
+  end
+
   def set_admin_time_zone
     Time.zone = Rails.application.config.time_zone
   end

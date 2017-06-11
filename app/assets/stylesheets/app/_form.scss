@@ -1,0 +1,23 @@
+.form {
+  input[type="text"],
+  input[type="number"],
+  input[type="search"],
+  select {
+    max-width: 100%;
+    padding: 10px 7px;
+    border: 2px solid #ebebeb;
+
+    &.large {
+      padding: 16px;
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}

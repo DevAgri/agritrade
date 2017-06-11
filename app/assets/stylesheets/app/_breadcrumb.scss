@@ -1,0 +1,22 @@
+.breadcrumb {
+  margin-bottom: 10px;
+
+  .link {
+    font-size: .9em;
+
+    &,
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:first-child:before {
+      display: none;
+    }
+
+    &:before {
+      margin-right: 5px;
+      content: ' › ';
+    }
+  }
+}

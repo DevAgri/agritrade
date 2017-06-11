@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170610193727) do
+ActiveRecord::Schema.define(version: 20170611094004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,19 @@ ActiveRecord::Schema.define(version: 20170610193727) do
 
   add_index "categories", ["ancestry"], name: "index_categories_on_ancestry", using: :btree
 
+  create_table "friendly_id_slugs", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
   create_table "product_attributes", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.uuid   "product_id"
     t.uuid   "attribute_id"
@@ -60,7 +73,28 @@ ActiveRecord::Schema.define(version: 20170610193727) do
     t.string "avatar_image_id"
     t.string "avatar_image_filename"
     t.string "avatar_image_content_type"
+    t.string "slug"
   end
+
+  add_index "products", ["slug"], name: "index_products_on_slug", unique: true, using: :btree
+
+  create_table "report_products", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.uuid    "report_id"
+    t.uuid    "product_id"
+    t.decimal "unit_value", precision: 8, scale: 2
+    t.decimal "quantity",   precision: 8, scale: 2
+  end
+
+  add_index "report_products", ["product_id"], name: "index_report_products_on_product_id", using: :btree
+  add_index "report_products", ["report_id"], name: "index_report_products_on_report_id", using: :btree
+
+  create_table "reports", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.uuid     "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "reports", ["user_id"], name: "index_reports_on_user_id", using: :btree
 
   create_table "users", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.string   "first_name"
@@ -80,4 +114,7 @@ ActiveRecord::Schema.define(version: 20170610193727) do
   add_foreign_key "product_attributes", "products"
   add_foreign_key "product_categories", "categories"
   add_foreign_key "product_categories", "products"
+  add_foreign_key "report_products", "products"
+  add_foreign_key "report_products", "reports"
+  add_foreign_key "reports", "users"
 end

@@ -1,0 +1,20 @@
+.evaluation-thumbs {
+  max-width: 300px;
+  margin: 25px 0;
+
+  .thumbs {
+    max-width: 100px;
+  }
+
+  .up {
+    color: $success-color;
+  }
+
+  .down {
+    color: $danger-color;
+  }
+
+  .count {
+    font-size: .9em;
+  }
+}

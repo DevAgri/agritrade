@@ -1,0 +1,30 @@
+.container,
+.small-container {
+  width: 96%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  max-width: 1600px;
+}
+
+.small-container {
+  max-width: 1200px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}

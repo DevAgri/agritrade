@@ -1,0 +1,34 @@
+.topbar {
+  padding: 10px 0;
+  color: #fff;
+  background-color: $primary-color;
+
+  &.large {
+    padding: 20px 0;
+  }
+
+  .link {
+    padding: 10px;
+
+    &:not(:first-child) {
+      paddding-left: 0;
+    }
+  }
+
+  .link-highlight {
+    background-color: rgba(0,0,0,.15);
+  }
+
+  &,
+  img {
+    animation: height 100ms;
+  }
+
+  &.sticky {
+    padding: 10px 0;
+
+    img {
+      height: 60px;
+    }
+  }
+}

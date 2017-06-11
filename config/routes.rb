@@ -5,6 +5,14 @@ Rails.application.routes.draw do
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  get '/', to: 'home#index'
+
+  get '/plano', to: 'plan#index'
+
+  resources :produtos, only: :show, controller: 'products' do
+    get '/relatorio', to: 'products#reports'
+  end
+
   scope '/api' do
     api_version(
       module: 'V1',
@@ -24,12 +32,6 @@ Rails.application.routes.draw do
       end
 
       get 'me', to: 'sessions#show'
-
-      resources :requests, only: [:index, :create] do
-        collection do
-          get 'report', to: 'requests_report#index'
-        end
-      end
     end
   end
 end

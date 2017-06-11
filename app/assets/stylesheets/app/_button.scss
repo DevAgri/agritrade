@@ -1,0 +1,15 @@
+.link-button {
+  color: $primary-color;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px;
+  color: #fff;
+  background-color: $primary-color;
+  border: 0;
+
+  &.block {
+    width: 100%;
+  }
+}

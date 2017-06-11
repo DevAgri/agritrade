@@ -1,0 +1,26 @@
+.categories {
+  padding: 20px 0 15px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.category-button {
+  display: inline-block;
+  padding: 0 40px;
+  text-align: center;
+
+  .image {
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    background-color: #ececec;
+  }
+
+  img {
+    max-width: 80%;
+    max-height: 70%;
+    padding-top: 15%;
+  }
+}

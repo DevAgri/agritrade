@@ -1,0 +1,191 @@
+.product-details {
+  padding: 20px 0;
+  background-color: #fff;
+
+  &.small-container {
+    margin-top: 30px;
+    padding: 0;
+
+    .title {
+      font-size: 2em;
+    }
+  }
+
+  .title-container {
+    padding: 40px;
+    border-bottom: 1px solid #eff1ee;
+
+    .title {
+      margin: 0;
+    }
+  }
+
+  .content-container {
+    padding: 20px 40px;
+  }
+
+  .title {
+    font-size: 2.5em;
+    font-weight: bold;
+
+    small {
+      color: #8c8c8c;
+      font-size: .5em;
+    }
+  }
+
+  .label {
+    font-size: .9em;
+
+    &.highlight {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .price-history {
+    max-width: 600px;
+  }
+
+  .price-container {
+    margin: 15px 0;
+  }
+
+  .price {
+    font-size: 1em;
+
+    &.low {
+      font-size: 2em;
+      color: $success-color;
+    }
+
+    &.high {
+      color: $danger-color;
+    }
+
+    &.medium {
+      color: $info-color;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 2em;
+
+      &.low {
+        font-size: 3em;
+      }
+    }
+  }
+
+  .status {
+    font-size: .8em;
+  }
+
+  .icon {
+    font-size: .6em;
+  }
+
+  .unit,
+  .amount {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+  }
+
+  .unit {
+    font-size: .8em;
+  }
+
+  img {
+    max-height: 240px;
+  }
+
+  .actions {
+    margin-top: 30px;
+    font-size: .9em;
+  }
+
+  .action {
+    margin: 0 7px;
+    color: #8c8c8c;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .subtitle-container {
+    margin: 20px 0;
+
+    .subtitle {
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+
+    .label {
+      display: block;
+      margin: 15px 0;
+      color: #8c8c8c;
+      font-size: .8em;
+    }
+
+    .icon {
+      color: $primary-color;
+    }
+  }
+
+  .alert-form {
+    margin: 30px 0;
+
+    .button {
+      margin-top: 30px;
+    }
+  }
+
+  .related-product {
+    .title {
+      margin: 0;
+    }
+
+    .subtitle {
+      margin: 0 0 12px;
+      color: #8c8c8c;
+      font-size: .9em;
+    }
+  }
+}
+
+.product-attributes {
+  margin: 40px 0;
+  background-color: #f9f9f9;
+  font-size: .8em;
+  text-align: left;
+
+  .title {
+    display: block;
+    padding: 7px;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: $primary-color;
+  }
+
+  .attribute {
+    margin: 20px 0;
+    padding: 5px 7px;
+  }
+
+  .label {
+    color: $primary-color;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .icon {
+    width: 31px;
+    height: 31px;
+    color: #fff;
+    background-color: $primary-color;
+    line-height: 31px;
+    text-align: center;
+    font-size: 1.8em;
+  }
+}

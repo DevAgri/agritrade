@@ -1,0 +1,20 @@
+<div class="topbar <%= hide_logo ? "large" : "" %>">
+  <div class="container">
+    <div class="row middle-xs">
+      <div class="<%= hide_logo ? "col-xs-5" : "col-xs-12 col-sm-3" %>">
+        <a href="#"><i class="fa fa-map-marker"></i> Sorriso/MT <small>(trocar cidade)</small></a>
+      </div>
+      <% unless hide_logo %>
+        <div class="col-xs-12 col-sm-6 text-center">
+          <a href="/">
+            <img src="/assets/logo.png" alt="Agri Trade" height="150">
+          </a>
+        </div>
+      <% end %>
+      <div class="<%= hide_logo ? "col-xs-7" : "col-xs-12 col-sm-3" %> text-right">
+        <a href="#" class="link link-highlight">Sou Produtor</a>
+        <a href="#" class="link">Entrar</a>
+      </div>
+    </div>
+  </div>
+</div>

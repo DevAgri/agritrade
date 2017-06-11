@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Agri Trade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' %>
 </head>
 <body>
-  <%= render 'shared/messages' %>
+  <%= render 'shared/topbar', hide_logo: @hide_logo %>
   <%== yield %>
 </body>
 </html>

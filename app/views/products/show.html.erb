@@ -1,0 +1,178 @@
+<div class="product-details">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="#" class="link">Início</a>
+      <a href="#" class="link"><%= @culture %></a>
+      <a href="#" class="link"><%= @class %></a>
+      <a href="#" class="link"><%= @active_ingredient %></a>
+      <a href="#" class="link"><%= @brand %></a>
+      <span class="link active"><%= @product.title %></span>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-3 text-center">
+        <%= image_tag(@product.avatar_image_url || '/assets/no-image.jpg', width: 240, height: 240) %>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-5">
+        <h1 class="title"><%= @product.title %></h1>
+        <p class="date-range">
+          Amostragens do período de <strong><i class="fa fa-clock-o"></i> <%= l(@beginning_of_month) %></strong> à <strong><i class="fa fa-clock-o"></i> <%= l(@end_of_month) %></strong>
+        </p>
+        <%= render 'shared/evaluation/stars', total_evaluations: 3, total_up: 3, total_down: 0 %>
+        <div class="price-history">
+          <div class="row top-xs">
+            <div class="col-xs-6 product-container">
+              <div class="label highlight">melhor preço da região</div>
+              <div class="price low">
+                <i class="icon fa fa-chevron-circle-up"></i>
+                <div class="unit">$</div>
+                <div class="amount"><%= @better_price %></div>
+              </div>
+            </div>
+            <div class="col-xs-3 product-container">
+              <div class="label">preço médio</div>
+              <div class="price medium">
+                <div class="unit">$</div>
+                <div class="amount"><%= @medium_price %></div>
+              </div>
+            </div>
+            <div class="col-xs-3 product-container">
+              <div class="label">preço máximo</div>
+              <div class="price high">
+                <div class="unit">$</div>
+                <div class="amount"><%= @high_price %></div>
+              </div>
+            </div>
+          </div>
+          <div class="row top-xs">
+            <div class="col-xs-6 product-container">
+              <div class="label highlight">meu preço praticado</div>
+              <div class="price medium">
+                <i class="icon fa fa-chevron-circle-up"></i>
+                <div class="unit">$</div>
+                <div class="amount"><%= @my_price %></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <a href="#" class="action">
+            <i class="fa fa-heart"></i> Salvar
+          </a>
+          <a href="#" class="action">
+            <i class="fa fa-bell"></i> Criar Alerta de Preço
+          </a>
+          <a href="#" class="action">
+            <i class="fa fa-balance-scale"></i> Comparar
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-4 text-center">
+        <div class="product-attributes">
+          <span class="title">Detalhes</span>
+          <div class="row top-xs">
+            <div class="col-xs-6">
+              <div class="attribute row">
+                <div class="col-xs-3">
+                  <div class="icon fa fa-bookmark"></div>
+                </div>
+                <div class="col-xs-9">
+                  <div class="label">Classe</div>
+                  <div class="value"><%= @class %></div>
+                </div>
+              </div>
+              <div class="attribute row">
+                <div class="col-xs-3">
+                  <div class="icon fa fa-industry"></div>
+                </div>
+                <div class="col-xs-9">
+                  <div class="label">Marca</div>
+                  <div class="value"><%= @brand %></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="attribute row">
+                <div class="col-xs-3">
+                  <div class="icon fa fa-flask"></div>
+                </div>
+                <div class="col-xs-9">
+                  <div class="label">Ingrediente Ativo</div>
+                  <div class="value"><%= @active_ingredient %></div>
+                </div>
+              </div>
+              <div class="attribute row">
+                <div class="col-xs-3">
+                  <div class="icon fa fa-bolt"></div>
+                </div>
+                <div class="col-xs-9">
+                  <div class="label">Formulação</div>
+                  <div class="value"><%= @formulation %></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="product-details small-container">
+  <div class="title-container">
+    <h2 class="title">
+      Histórico de Preços
+      <small>Saiba encontrar as melhores oportunidades</small>
+    </h2>
+  </div>
+  <div class="content-container">
+    <div class="row">
+      <div class="col-sm-8">
+        <%= line_chart(produto_relatorio_path(@product)) %>
+      </div>
+      <div class="col-sm-4">
+        <div class="subtitle-container">
+          <div class="subtitle">
+            <div class="icon fa fa-bell"></div>
+            Está caro?
+          </div>
+          <small class="label">Deixa que avisamos você automaticamente quando baixar o valor</small>
+        </div>
+        <form action="" class="form alert-form">
+          <label for="alert_price">Quanto gostaria de pagar?</label>
+          <input type="number" id="alert_price" class="full-width">
+          <button type="submit" class="button">
+            <i class="fa fa-plus"></i>
+            Criar Alerta
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="product-details small-container">
+  <div class="title-container">
+    <h2 class="title">
+      Produtos Relacionados
+      <small>Encontre preços variados de produtos com o mesmo <strong>Princípio Ativo</strong></small>
+    </h2>
+  </div>
+  <div class="content-container">
+    <div class="row">
+      <% @related_products.each do |product| %>
+        <div class="col-md-4">
+          <a href="<%= produto_path(product) %>" class="related-product text-center">
+            <figure class="image">
+              <%= image_tag(product.avatar_image_url || '/assets/no-image.jpg', width: 240, height: 240) %>
+            </figure>
+            <p class="title"><%= product.title %></p>
+            <p class="subtitle"><%= product.product_attributes.includes(:attribute_entity).find_by('attributes.code': 'active_ingredient').try(:value) %></p>
+            <div class="label">preço médio</div>
+            <div class="price medium">
+              <div class="unit">$</div>
+              <div class="amount"><%= product.medium_price.zero? ? 'N/A' : product.medium_price %></div>
+            </div>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

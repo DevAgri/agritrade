@@ -1,0 +1,14 @@
+.empty-data {
+  margin: 60px 0;
+  font-size: 2em;
+  text-align: center;
+
+  .title {
+    color: $danger-color;
+    font-weight: bold;
+  }
+
+  .reason {
+    font-size: .8em;
+  }
+}
