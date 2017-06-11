@@ -18,6 +18,15 @@
 2. Run `User.create(first_name: 'John', last_name: 'Doe', password: '123123', password_confirmation: '123123', email: 'john.doe@gmail.com', role: :admin)`
 3. That's it
 
+## Features
+1. Create dynamic attributes (of any kind: string, options)
+2. Search for products by any dynamic attributes with misspelling error tip (active ingredient, title, formulation, etc)
+3. API base support + Token auth
+4. ActiveAdmin as admin dashboard only
+5. Fully responsive support
+6. Variant algorithm for medians
+7. Historical series with graphical resources
+
 ## Licenses
 
 Agri Trade (GPLv2)
